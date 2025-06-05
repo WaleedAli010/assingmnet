@@ -28,4 +28,18 @@ class Post {
       'body': body,
     };
   }
+  String get firstLetter {
+    return title.isNotEmpty ? title[0].toUpperCase() : '?';
+  }
+
+// Helper method to get truncated title (first 10 characters)
+  String get truncatedTitle {
+    return title.length > 7 ? '${title.substring(0, 7)}' : title;
+  }
+
+// Helper method to get truncated body (first 200 characters)
+  String get truncatedBody {
+    return body.length > 100 ? '${body.substring(0, 100)}' : body;
+  }
 }
+
